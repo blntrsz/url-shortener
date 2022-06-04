@@ -11,13 +11,6 @@ export const appRouter = trpc.router().query("hello", {
     .nullish(),
   async resolve({ input }) {
     // Creating a new record
-    const p = new PrismaClient();
-    await p.link.create({
-      data: {
-        slug: "slug",
-        url: "url",
-      },
-    });
     return {
       greeting: `hello ${input?.text ?? "world"}`,
     };

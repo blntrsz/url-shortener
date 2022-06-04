@@ -6,12 +6,16 @@ specifiers:
   '@trpc/next': ^9.24.0
   '@trpc/react': ^9.24.0
   '@trpc/server': ^9.24.0
+  '@types/lodash': ^4.14.182
   '@types/node': 17.0.38
   '@types/react': 18.0.10
   '@types/react-dom': 18.0.5
   autoprefixer: ^10.4.7
+  copy-to-clipboard: ^3.3.1
   eslint: 8.16.0
   eslint-config-next: 12.1.6
+  lodash: ^4.17.21
+  nanoid: ^3.3.4
   next: 12.1.6
   postcss: ^8.4.14
   prisma: ^3.14.0
@@ -28,6 +32,8 @@ dependencies:
   '@trpc/next': 9.24.0_d736bde395122b98f6d937457ed0c83f
   '@trpc/react': 9.24.0_f5366735ba9c0be6e83c9ce531af1bdf
   '@trpc/server': 9.24.0
+  '@types/lodash': 4.14.182
+  lodash: 4.17.21
   next: 12.1.6_react-dom@18.1.0+react@18.1.0
   react: 18.1.0
   react-dom: 18.1.0_react@18.1.0
@@ -40,8 +46,10 @@ devDependencies:
   '@types/react': 18.0.10
   '@types/react-dom': 18.0.5
   autoprefixer: 10.4.7_postcss@8.4.14
+  copy-to-clipboard: 3.3.1
   eslint: 8.16.0
   eslint-config-next: 12.1.6_5794735a2262de3d29e0baaa885b5942
+  nanoid: 3.3.4
   postcss: 8.4.14
   prisma: 3.14.0
   tailwindcss: 3.0.24_ts-node@10.8.1
@@ -356,6 +364,10 @@ packages:
   /@types/json5/0.0.29:
     resolution: {integrity: sha512-dRLjCWHYg4oaA77cxO64oO+7JwCwnIzkZPdrrC71jQmQtlhM556pwKo5bUzqvZndkVbeFLIIi+9TC40JNF5hNQ==}
     dev: true
+
+  /@types/lodash/4.14.182:
+    resolution: {integrity: sha512-/THyiqyQAP9AfARo4pF+aCGcyiQ94tX/Is2I7HofNRqoYLgN1PBoOWu2/zTA5zMxzP5EFutMtWtGAFRKUe961Q==}
+    dev: false
 
   /@types/node/17.0.38:
     resolution: {integrity: sha512-5jY9RhV7c0Z4Jy09G+NIDTsCZ5G0L5n+Z+p+Y7t5VJHM30bgwzSjVtlcBxqAj+6L/swIlvtOSzr8rBk/aNyV2g==}
@@ -704,6 +716,12 @@ packages:
 
   /concat-map/0.0.1:
     resolution: {integrity: sha1-2Klr13/Wjfd5OnMDajug1UBdR3s=}
+
+  /copy-to-clipboard/3.3.1:
+    resolution: {integrity: sha512-i13qo6kIHTTpCm8/Wup+0b1mVWETvu2kIMzKoK8FpkLkFxlt0znUAHcMzox+T8sPlqtZXq3CulEjQHsYiGFJUw==}
+    dependencies:
+      toggle-selection: 1.0.6
+    dev: true
 
   /core-js-pure/3.22.8:
     resolution: {integrity: sha512-bOxbZIy9S5n4OVH63XaLVXZ49QKicjowDx/UELyJ68vxfCRpYsbyh/WNZNfEfAk+ekA8vSjt+gCDpvh672bc3w==}
@@ -1543,6 +1561,10 @@ packages:
     resolution: {integrity: sha512-0KpjqXRVvrYyCsX1swR/XTK0va6VQkQM6MNo7PqW77ByjAhoARA8EfrP1N4+KlKj8YS0ZUCtRT/YUuhyYDujIQ==}
     dev: true
 
+  /lodash/4.17.21:
+    resolution: {integrity: sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==}
+    dev: false
+
   /loose-envify/1.4.0:
     resolution: {integrity: sha512-lyuxPGr/Wfhrlem2CL/UcnUc1zcqKAImBDzukY7Y5F/yQiNdko6+fRLevlw1HgMySw7f611UIY408EtxRSoK3Q==}
     hasBin: true
@@ -2196,6 +2218,10 @@ packages:
     engines: {node: '>=8.0'}
     dependencies:
       is-number: 7.0.0
+    dev: true
+
+  /toggle-selection/1.0.6:
+    resolution: {integrity: sha1-bkWxJj8gF/oKzH2J14sVuL932jI=}
     dev: true
 
   /ts-node/10.8.1_3ffeca41e430ac205105ff1fe4cb5347:
